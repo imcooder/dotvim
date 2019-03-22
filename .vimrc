@@ -4,8 +4,8 @@
 "                        \ V /| | | | | | | | | (__
 "                       (_)_/ |_|_| |_| |_|_|  \___|
 "
-" Author: chxuan <787280310@qq.com>
-" Source: https://github.com/chxuan/vimplus
+" Author: imcooder@gmail.com
+" Source: https://github.com/imcooder/dotvim
 
 " genernal settings
 syntax enable
@@ -198,7 +198,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 " Doxygen
-let g:DoxygenToolkit_authorName="chxuan, 787280310@qq.com"
+let g:DoxygenToolkit_authorName="imcooder@gmail.com"
 let s:licenseTag = "Copyright(C)\<enter>"
 let s:licenseTag = s:licenseTag . "For free\<enter>"
 let s:licenseTag = s:licenseTag . "All right reserved\<enter>"
@@ -380,10 +380,6 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 
-
-" mark.vim
-nmap <Leader>M <Plug>MarkToggle
-nmap <Leader>N <Plug>MarkAllClear
 
 autocmd FileType c,cpp,html,js,python,javascript,json,conf,sh setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType make setlocal noexpandtab
