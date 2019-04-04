@@ -55,7 +55,7 @@ set linespace=0
 set wildmenu
 set backspace=2
 set whichwrap+=<,>,h,l
-set mouse=a
+set mouse=v
 set selection=exclusive
 set selectmode=mouse,key
 set report=0
@@ -119,7 +119,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'L9'
 Plugin 'chxuan/change-colorscheme'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'itchyny/vim-cursorword'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -156,6 +155,9 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'hushicai/fecs.vim.git'
 Plugin 'mileszs/ack.vim'
 Plugin 'inkarkat/vim-ingo-library'
+" Plugin 'itchyny/vim-cursorword'
+Plugin 'dominikduda/vim_current_word'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -174,17 +176,20 @@ imap <F9> <ESC> :PreviousColorScheme<CR>
 map <F3> :NERDTreeToggle<CR>
 imap <F3> <ESC> :NERDTreeToggle<CR>
 "autocmd vimenter * if !argc() | NERDTree | endif
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeChDirMode = 2
 " 忽略一下文件的显示
 let NERDTreeIgnore=['\.pyc','\~$','\.swp', '\.DS_Store', '\.a', '\.so', '\.a', '\.o']
 " 显示行号
 let NERDTreeShowLineNumbers=1
 " 设置宽度
 let NERDTreeWinSize=31
-" 是否显示隐藏文件
-" let NERDTreeShowHidden=1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+"是否显示隐藏文件
+"let NERDTreeShowHidden=1
 " 显示书签列表
-" let NERDTreeShowBookmarks=1
+let NERDTreeShowBookmarks=1
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
@@ -379,6 +384,8 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 
+hi CurrentWord gui=underline ctermbg=NONE cterm=underline
+hi CurrentWordTwins gui=underline cterm=underline
 
 autocmd FileType c,cpp,html,js,python,javascript,json,conf,sh setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType make setlocal noexpandtab
