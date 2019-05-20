@@ -157,6 +157,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'inkarkat/vim-ingo-library'
 " Plugin 'itchyny/vim-cursorword'
 Plugin 'dominikduda/vim_current_word'
+Plugin 'wsdjeg/FlyGrep.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -384,8 +385,13 @@ map <leader>to :tabonly<cr>
 map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 
+" vim_current_word
 hi CurrentWord gui=underline ctermbg=NONE cterm=underline
 hi CurrentWordTwins gui=underline cterm=underline
+
+
+" FlyGrep   
+nnoremap <Space>s/ :FlyGrep<cr>
 
 autocmd FileType c,cpp,html,js,python,javascript,json,conf,sh setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType make setlocal noexpandtab
