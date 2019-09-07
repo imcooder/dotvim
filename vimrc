@@ -158,7 +158,7 @@ Plugin 'inkarkat/vim-ingo-library'
 " Plugin 'itchyny/vim-cursorword'
 Plugin 'dominikduda/vim_current_word'
 Plugin 'wsdjeg/FlyGrep.vim'
-
+Plugin 'fatih/vim-go'
 call vundle#end()
 filetype plugin indent on
 
@@ -235,8 +235,8 @@ let mapleader = ","
 "nnoremap <leader>u :YcmCompleter GoToDeclaration<CR>
 "nnoremap <leader>i :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>o :YcmCompleter GoToInclude<CR>
-"map<F11> :YcmCompleter GotoInclude<CR>
-"imap<F11> :YcmCompleter GotoInclude<CR>
+"map<F11> :YcmCompleter GotoInclude<CR> imap<F11> :YcmCompleter
+"GotoInclude<CR>
 
 "nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
