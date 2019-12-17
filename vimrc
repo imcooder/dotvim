@@ -159,6 +159,7 @@ Plugin 'inkarkat/vim-ingo-library'
 Plugin 'dominikduda/vim_current_word'
 Plugin 'wsdjeg/FlyGrep.vim'
 Plugin 'fatih/vim-go'
+Plugin 'zivyangll/git-blame.vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -392,6 +393,9 @@ hi CurrentWordTwins gui=underline cterm=underline
 
 " FlyGrep   
 nnoremap <Space>s/ :FlyGrep<cr>
+
+" git-blame
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 autocmd FileType c,cpp,html,js,python,javascript,json,conf,sh setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType make setlocal noexpandtab
