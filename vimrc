@@ -76,31 +76,31 @@ filetype indent on
 " create file ettings
 autocmd BufNewFile *.cpp,*.cc,*.c,*.hpp,*.h,*.sh,*.py exec ":call SetTitle()"
 func! SetTitle()
-	if expand("%:e") == 'sh'
-		call setline(1,"\#!/bin/bash")
-		call append(line("."), "")
+    if expand("%:e") == 'sh'
+        call setline(1,"\#!/bin/bash")
+        call append(line("."), "")
     elseif expand("%:e") == 'py'
         call setline(1,"#!/usr/bin/env python")
         call append(line("."),"# coding=utf-8")
-	    call append(line(".")+1, "")
+        call append(line(".")+1, "")
     elseif expand("%:e") == 'cpp'
-		call setline(1,"#include <iostream>")
-		call append(line("."), "")
+        call setline(1,"#include <iostream>")
+        call append(line("."), "")
     elseif expand("%:e") == 'cc'
-		call setline(1,"#include <iostream>")
-		call append(line("."), "")
+        call setline(1,"#include <iostream>")
+        call append(line("."), "")
     elseif expand("%:e") == 'c'
-		call setline(1,"#include <stdio.h>")
-		call append(line("."), "")
+        call setline(1,"#include <stdio.h>")
+        call append(line("."), "")
     elseif expand("%:e") == 'h'
-		call setline(1, "#ifndef _".toupper(expand("%:r"))."_H")
-		call setline(2, "#define _".toupper(expand("%:r"))."_H")
-		call setline(3, "#endif")
+        call setline(1, "#ifndef _".toupper(expand("%:r"))."_H")
+        call setline(2, "#define _".toupper(expand("%:r"))."_H")
+        call setline(3, "#endif")
     elseif expand("%:e") == 'hpp'
-		call setline(1, "#ifndef _".toupper(expand("%:r"))."_H")
-		call setline(2, "#define _".toupper(expand("%:r"))."_H")
-		call setline(3, "#endif")
-	endif
+        call setline(1, "#ifndef _".toupper(expand("%:r"))."_H")
+        call setline(2, "#define _".toupper(expand("%:r"))."_H")
+        call setline(3, "#endif")
+    endif
 endfunc
 autocmd BufNewFile * normal G
 "离开插入模式后自动关闭预览窗口
@@ -315,7 +315,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 " 如果你想在写文件时不进行检查，需要配置`passive`模式
 " 在`passive`模式下，只有手动调用了`:SyntasticCheck`才会触发检查
-" let g:syntastic_mode_map = {'mode': 'passive'} 
+" let g:syntastic_mode_map = {'mode': 'passive'}
 " 你可以配置一个快捷方式，用来快速检查当前文件
 " nmap <silent> <F5> :SyntasticCheck<cr>
 let g:syntastic_javascript_checkers = ['eslint','jshint']
@@ -373,8 +373,8 @@ let g:NERDTreePatternMatchHighlightFullName = 1
 vmap Q gq
 nmap Q gqap
 "
-" 
-" 
+"
+"
 " incsearch.vim
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
@@ -394,7 +394,7 @@ hi CurrentWord gui=underline ctermbg=NONE cterm=underline
 hi CurrentWordTwins gui=underline cterm=underline
 
 
-" FlyGrep   
+" FlyGrep
 nnoremap <Space>s/ :FlyGrep<cr>
 
 " git-blame
@@ -404,3 +404,4 @@ autocmd FileType c,cpp,html,js,python,javascript,json,conf,sh setlocal expandtab
 autocmd FileType make setlocal noexpandtab
 autocmd FileType dict setlocal noexpandtab
 autocmd FileType text setlocal noexpandtab
+
