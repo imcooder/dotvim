@@ -125,7 +125,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'Valloric/MatchTagAlways'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 "Plugin 'scrooloose/syntastic'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'docunext/closetag.vim'
@@ -158,7 +158,7 @@ Plugin 'inkarkat/vim-ingo-library'
 " Plugin 'itchyny/vim-cursorword'
 Plugin 'dominikduda/vim_current_word'
 Plugin 'wsdjeg/FlyGrep.vim'
-Plugin 'fatih/vim-go'
+" Plugin 'fatih/vim-go'
 Plugin 'zivyangll/git-blame.vim'
 call vundle#end()
 filetype plugin indent on
@@ -337,6 +337,9 @@ let g:ctrlp_max_height = 20
 let g:ctrlp_map = '<C-P>'
 let g:ctrlp_cmd = ':CtrlP'
 let g:ctrlp_working_path_mode = '0'
+let g:ctrlp_max_depth=40
+let g:ctrlp_follow_symlinks=1
+let g:ctrlp_max_files = ''
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.gz,*.tar     " MacOSX/Linux
 set wildignore+=*.o,*.so,*.a,*.un~
 set wildignore+=*.pyc
