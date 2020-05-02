@@ -160,6 +160,7 @@ Plugin 'dominikduda/vim_current_word'
 Plugin 'wsdjeg/FlyGrep.vim'
 " Plugin 'fatih/vim-go'
 Plugin 'zivyangll/git-blame.vim'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 filetype plugin indent on
 
@@ -214,6 +215,9 @@ let g:doxygen_enhanced_color=1
 let g:DoxygenToolkit_commentType="Qt"
 
 " YCM https://github.com/Valloric/YouCompleteMe/
+"let g:ycm_server_python_interpreter='~/.jumbo/bin/python3'
+let g:ycm_path_to_python_interpreter='~/.jumbo/bin/python3'
+"let g:ycm_python_binary_path = '~/.jumbo/bin/python3'
 let g:ycm_global_ycm_extra_conf = '.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_error_symbol = '>>'
@@ -244,6 +248,7 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nmap <F5> :YcmDiags<CR>
 map <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 imap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_server_python_interpreter='/home/users/xuejuntao/.jumbo/bin/python2'
 " a.vim: .h -> .cpp or .cpp -> .h
 nnoremap <silent> <F2> :A<CR>
 imap <F2> <ESC> :A<CR>
@@ -399,6 +404,8 @@ nnoremap <Space>s/ :FlyGrep<cr>
 
 " git-blame
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+" jedi
+let g:jedi#completions_enabled = 1
 
 autocmd FileType c,cpp,html,js,python,javascript,json,conf,sh setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType make setlocal noexpandtab
