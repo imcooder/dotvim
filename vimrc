@@ -399,7 +399,6 @@ map <leader>tm :tabmove
 hi CurrentWord gui=underline ctermbg=NONE cterm=underline
 hi CurrentWordTwins gui=underline cterm=underline
 
-
 " FlyGrep
 nnoremap <Space>s/ :FlyGrep<cr>
 
