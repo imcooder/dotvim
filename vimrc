@@ -161,6 +161,7 @@ Plugin 'wsdjeg/FlyGrep.vim'
 " Plugin 'fatih/vim-go'
 Plugin 'zivyangll/git-blame.vim'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'fatih/vim-go'
 call vundle#end()
 filetype plugin indent on
 
@@ -215,7 +216,7 @@ let g:doxygen_enhanced_color=1
 let g:DoxygenToolkit_commentType="Qt"
 
 " YCM https://github.com/Valloric/YouCompleteMe/
-"let g:ycm_server_python_interpreter='~/.jumbo/bin/python3'
+let g:ycm_server_python_interpreter='~/.jumbo/bin/python3'
 let g:ycm_path_to_python_interpreter='~/.jumbo/bin/python3'
 "let g:ycm_python_binary_path = '~/.jumbo/bin/python3'
 let g:ycm_global_ycm_extra_conf = '.ycm_extra_conf.py'
