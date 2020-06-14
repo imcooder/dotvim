@@ -407,6 +407,32 @@ nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 " jedi
 let g:jedi#completions_enabled = 1
 
+" QuickFix
+nmap <leader>co :QFix<CR>
+nmap <leader>ct :call QFixToggle(1)<CR>
+command! -bang -nargs=? QFix call QFixToggle(<bang>0)
+map <F6> : call QFixToggle(1)<CR>
+imap <F6> <ESC> :call QFixToggle(1)<CR>
+
+function! QFixToggle(forced)
+    if exists("g:qfix_win") && a:forced != 0
+        cclose
+    else
+        if exists("g:my_quickfix_win_height")
+            execute "copen ".g:my_quickfix_win_height
+        else
+            copen
+        endif
+    endif
+endfunction
+
+augroup QFixToggle
+    autocmd!
+    autocmd BufWinEnter quickfix let g:qfix_win = bufnr("$")
+    autocmd BufWinLeave * if exists("g:qfix_win") && expand("<abuf>") == g:qfix_win | unlet! g:qfix_win | endif
+augroup END
+"
+
 autocmd FileType c,cpp,html,js,python,javascript,json,conf,sh setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType make setlocal noexpandtab
 autocmd FileType dict setlocal noexpandtab
