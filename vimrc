@@ -158,7 +158,6 @@ Plugin 'inkarkat/vim-ingo-library'
 " Plugin 'itchyny/vim-cursorword'
 Plugin 'dominikduda/vim_current_word'
 Plugin 'wsdjeg/FlyGrep.vim'
-" Plugin 'fatih/vim-go'
 Plugin 'zivyangll/git-blame.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'fatih/vim-go'
@@ -194,7 +193,7 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 "let NERDTreeShowHidden=1
 " 显示书签列表
 let NERDTreeShowBookmarks=1
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Modified"  : "✹",
     \ "Staged"    : "✚",
     \ "Untracked" : "✭",
