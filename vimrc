@@ -4,7 +4,7 @@
 "                        \ V /| | | | | | | | | (__
 "                       (_)_/ |_|_| |_| |_|_|  \___|
 "
-" Author: imcooder@gmail.com
+" Author: imcooder@qq.com
 " Source: https://github.com/imcooder/dotvim
 
 " genernal settings
