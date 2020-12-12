@@ -4,8 +4,8 @@
 set -x
 set -e
 #set -o pipefail
-BIN_DIR=$(dirname $BASH_SOURCE[0])
-BUNDLE_DIR="~/.vim/bundle"
+BIN_DIR="$(cd "$( dirname "$0")" && pwd)"
+BUNDLE_DIR=~/.vim/bundle
 echo "mkdir .vimrc"
 ln -sf "${BIN_DIR}/vimrc" ~/.vimrc
 echo "install bundle"
