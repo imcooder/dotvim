@@ -215,9 +215,9 @@ let g:doxygen_enhanced_color=1
 let g:DoxygenToolkit_commentType="Qt"
 
 " YCM https://github.com/Valloric/YouCompleteMe/
-let g:ycm_server_python_interpreter='~/.jumbo/bin/python3'
-let g:ycm_path_to_python_interpreter='~/.jumbo/bin/python3'
-"let g:ycm_python_binary_path = '~/.jumbo/bin/python3'
+let g:ycm_server_python_interpreter='~/.jumbo/bin/python'
+let g:ycm_path_to_python_interpreter='~/.jumbo/bin/python'
+let g:ycm_python_binary_path = '~/.jumbo/bin/python'
 let g:ycm_global_ycm_extra_conf = '.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_error_symbol = '>>'
@@ -406,7 +406,24 @@ nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 " jedi
 let g:jedi#completions_enabled = 1
 
-" QuickFix
+" go
+let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
+let g:go_list_type = "quickfix"
+
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_build_constraints = 1
+let g:go_echo_go_info = 0
+let g:go_metalinter_autosave=1
+"
+"
+"" QuickFix
 nmap <leader>co :QFix<CR>
 nmap <leader>ct :call QFixToggle(1)<CR>
 command! -bang -nargs=? QFix call QFixToggle(<bang>0)

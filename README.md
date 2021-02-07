@@ -3,4 +3,4 @@ vim config
 
 ## usage
 
-ln -rsf ~/config-files/.vimrc ~/.vimrc 
+bash ./install.sh
