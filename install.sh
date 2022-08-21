@@ -17,4 +17,3 @@ cp -r ./vim/* $VIM_DIR
 cd ${BUNDLE_DIR}
 git clone https://github.com/VundleVim/Vundle.vim.git
 echo "finish"
-
