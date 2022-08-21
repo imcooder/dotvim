@@ -215,9 +215,9 @@ let g:doxygen_enhanced_color=1
 let g:DoxygenToolkit_commentType="Qt"
 
 " YCM https://github.com/Valloric/YouCompleteMe/
-let g:ycm_server_python_interpreter='~/.jumbo/bin/python'
-let g:ycm_path_to_python_interpreter='~/.jumbo/bin/python'
-let g:ycm_python_binary_path = '~/.jumbo/bin/python'
+" let g:ycm_server_python_interpreter='/usr/bin/python'
+" let g:ycm_path_to_python_interpreter='python'
+" let g:ycm_python_binary_path = 'python'
 let g:ycm_global_ycm_extra_conf = '.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_error_symbol = '>>'
@@ -248,7 +248,6 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nmap <F5> :YcmDiags<CR>
 map <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 imap <F12> :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_server_python_interpreter='/home/users/xuejuntao/.jumbo/bin/python2'
 " a.vim: .h -> .cpp or .cpp -> .h
 nnoremap <silent> <F2> :A<CR>
 imap <F2> <ESC> :A<CR>
@@ -273,8 +272,8 @@ let g:solarized_contrast="normal"
 let g:solarized_visibility="normal"
 let g:solarized_hitrail=0
 "set termguicolors
-" colorscheme monokai
-colorscheme solarized8_high
+colorscheme monokai
+" colorscheme solarized8_high
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
