@@ -140,7 +140,7 @@ Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'majutsushi/tagbar'
 Plugin 'octol/vim-cpp-enhanced-highlight'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airlin-themes'
 Plugin 'vim-scripts/a.vim'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/awk.vim'
@@ -264,12 +264,17 @@ map <F4> :TagbarToggle<CR>
 imap <F4> <ESC> :TagbarToggle<CR>
 
 " colorscheme
-set background=dark
+set background=light
 let g:solarized_termcolors=256
+let g:solarized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
+let g:solarized_hitrail=0
 "set termguicolors
-"colorscheme solarized
-colorscheme monokai
-"colorscheme NeoSolarized
+" colorscheme monokai
+colorscheme solarized
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
