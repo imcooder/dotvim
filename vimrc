@@ -274,7 +274,7 @@ let g:solarized_visibility="normal"
 let g:solarized_hitrail=0
 "set termguicolors
 " colorscheme monokai
-colorscheme solarized
+colorscheme solarized8_high
 
 " cpp_class_scope_highlight
 let g:cpp_class_scope_highlight = 1
